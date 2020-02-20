@@ -43,9 +43,10 @@ body {
 }
 
 aside{
+    font-size: 1.2rem;
     position: fixed;
     height: 100%;
-    max-width: 20%;
+    min-width: 20%;
     background-color: #081c40;
     border-right: 3px solid rgb(6, 3, 19);
     color: #eee;
@@ -58,7 +59,7 @@ header{
 }
 
 .content{
-    padding: 0px 10px;
+    padding: 0px 20px;
     margin-top: 20px;
 }
 
@@ -112,4 +113,9 @@ main{
 h1{
     text-align: left;
     font-weight: bold;
+}
+
+li{
+    list-style-type: none;
+    margin-left: 25px;
 }

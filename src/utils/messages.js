@@ -1,10 +1,18 @@
-const generateMessage = (text)=>{
+const generateMessage = (text, user)=>{
     return{
         text,
-        createdAt: new Date().getTime()
+        user,
+        createdAt: new Date().getTime(),
     }
 }
 
+//data sanitization 
+
+const encodeHTML = (userInput)=> {
+    return userInput.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+}
+
 module.exports = {
-    generateMessage
+    generateMessage,
+    encodeHTML
 }

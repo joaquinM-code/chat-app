@@ -14,7 +14,7 @@ const {username , room} = Qs.parse(location.search , { ignoreQueryPrefix: true})
 
 socket.on('message' , (message)=>{
     $messages.innerHTML += `<li>
-    <p><b>Some user Name - ${moment(message.createdAt).format("h:m A")}</b></p>
+    <p><b>${message.user} - ${moment(message.createdAt).format("h:m A")}</b></p>
     <p>${message.text}</p></li>`;
     window.scrollTo(0,document.body.clientHeight);
 })
@@ -68,5 +68,16 @@ socket.emit('join' , {username , room} , (error)=>{
         location.href = '/';
     }
 });
+
+
+//Refreshing room users list
+
+socket.on('roomData',({room  , users})=>{
+    console.log(users)
+    document.querySelector('#userList').innerHTML ="";
+    users.forEach((user)=>{
+        document.querySelector('#userList').innerHTML += `<li>-- ${user.username}</li>`;
+    })
+})
 
 
