@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/png" href="img/fav.png">
     <title>Chat App</title>
 </head>
 <body>
-    <h1>Chat app</h1>
-    <button id="send_location">Send Location</button>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off"><button id="send">Send</button>
-    </form>
-    
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/chat.js"></script>
+  <div id="fullBody" class="text-center">
+    <div id="joinForm">
+      <h1>Join</h1>
+      <form action="/chat.html" class="text-left">
+        <label>Display name</label>
+        <input type="text" name="username" placeholder="Display name" required class="form-control">
+        <label>Room</label>
+        <input type="text" name="room" placeholder="Room" required class="form-control">
+        <div class="text-center">
+          <button class="btn btn-primary mt-4 btn-block">Join</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

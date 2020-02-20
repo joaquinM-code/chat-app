@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/fav.png">
+    <title>Chat App</title>
+</head>
+<body>
+  <aside>
+    <header>
+      <h1>Chat app</h1>
+    </header>
+    <div class="content">
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quaerat natus officia nulla excepturi voluptas ad, veritatis nesciunt beatae, perferendis obcaecati eum maiores dolores minus vitae iusto voluptatibus ea molestias?</P>
+      <img title="Share your location" src="./img/location.png" id="send_location"/>
+    </div>
+  </aside>
+  <main>
+    
+    <ul id="messages"></ul>
+    <form id="msg" action="">
+      <input id="m" autocomplete="off" autofocus><button id="send">Send</button>
+    </form>
+  </main>
+    
+    
+    <script src="./js/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.1/qs.js"></script><!--String parser lib-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>

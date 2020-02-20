@@ -6,25 +6,21 @@
 body { 
     font: 13px Helvetica, Arial; 
 }
-form {
+#msg {
     background: #000; 
     padding: 3px; 
     position: fixed; 
-    bottom: 0; 
-    width: 100%; }
-form input { 
+    left: 50%;
+    margin-left: -25%;
+    bottom: 20px; 
+    width: 50%; }
+    
+#msg input { 
     border: 0; 
     padding: 10px; 
-    width: 90%; 
-    margin-right: .5%; 
+    width: 88%; 
 }
-button { 
-    width: 15%; 
-    background: rgb(130, 138, 25); 
-    border: none; 
-    padding: 10px; 
-    color: #eee;
-}
+
 #messages { 
     list-style-type: none; 
     margin: 0; 
@@ -32,14 +28,88 @@ button {
 }
 #messages li { 
     padding: 5px 10px;
+    word-wrap:break-word;
  }
 #messages li:nth-child(odd) { 
     background: #eee; 
 }
 
-form button { 
-    width: 9%; 
-    background: rgb(17, 58, 71); 
+#msg button { 
+    width: 12%; 
+    background: #081c40; 
     border: none; 
-    padding: 10px; 
+    padding: 10px;
+    color: #eee; 
+}
+
+aside{
+    position: fixed;
+    height: 100%;
+    max-width: 20%;
+    background-color: #081c40;
+    border-right: 3px solid rgb(6, 3, 19);
+    color: #eee;
+}
+
+header{
+    background-color:#100f42 ;
+    padding: 20px 10px;
+    border-bottom: 3px solid  rgb(6, 3, 19);
+}
+
+.content{
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+
+main{
+    overflow-y: auto;
+    min-height: 90vh;
+    min-width: 80%;
+    margin-left: 20%;
+    margin-bottom: 70px;
+}
+
+
+/*Send location styles*/
+
+#send_location { 
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    max-width: 50px;
+    cursor: pointer;
+}
+
+#send_location:hover{
+    transform: scale(1.2);
+}
+
+
+/*Join form styles*/
+
+#joinForm{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #081c40;
+    background-color: #eee;
+    padding: 50px 20px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgb(1, 7, 29);
+    line-height: 2.5em;
+}
+
+#fullBody{
+    background-color: #081c40;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+h1{
+    text-align: left;
+    font-weight: bold;
 }
